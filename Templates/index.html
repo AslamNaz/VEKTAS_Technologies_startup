@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VEKTAS</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<!-- Header -->
+<header id="header">
+  <div class="intro" style="width: 100%;">
+    <div class="container">
+      <div class="row">
+        <div class="intro-text">
+          <h1>VEKTAS</h1>
+          <p>TECHNOLOGIES</p>
+          <a href="#about" class="btn btn-custom btn-lg page-scroll">Learn More</a> </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2 style="font-family: 'Tahoma', sans-serif;">Designed to enable your life</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6"> <img src="{% static 'img/Flight large.jpg' %}" class="img-responsive" alt=""> </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <h2>Who we are</h2>
+          <p>We are a emerging company that builds Technologies.<br>Curremtly focused on Technologies used in Drones and<br> their Spin offs.We also provide end to end services using<br> drones to various sectors <br>● Registered in Ministry of Corporate Affairs : July 2022 <br>● Incubated in Kubic, Kerala university: August 2022 <br>● Registration Started with Kerala Startup Mission</p>
+          <h2>MISSION</h2>
+          <p>Our Vision is to bring you great technologies that<br>makes your life easier and to be an indespensable<br> part of your everyday life</p>
+          <h2>VISION</h2>
+          <p>We aknowledge and perform our social corporate<br> responsibilities.We ensure that we extend reasonable<br> help and support to uplift the society</p>
+           <h2>COMPANY CULTURE</h2>
+          <p>Our company culture is built around collaboration,innovation, and <br>a strong customer focus.We believe in working together as a team<br>  to achieve common goals, and encourage open communication and <br>experimentation to find new and better solutions.We have a strong<br> sense of ethics and integrity, and are guided by a commitment to social <br>responsibility.Our results-oriented approach values performance.</p>
+          <a href="#portfolio" class="btn btn-default btn-lg page-scroll">Our works</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="background-color:  rgba(84,208,221,1); margin: 0; padding: 0;">
+</div>
+
+<div style="background-color:  rgba(84,208,221,1); text-align: center;">
+  <div style="position: relative;">
+    <h1 style="color: Black; margin: 0"><b>Certificate of Recognition<b></b></h1><br><br>
+    <img src="{% static 'img/WhatsApp Image 2023-01-26 at 8.53.29 PM.jpeg' %}" alt="your-image-description" height="300px" width="400px">
+  </div>
+</div>
+
+
+
+<div style="background-color:  rgba(84,208,221,1); margin: 0; padding: 0;">
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+
+<section class="section video" data-section="section5" style="background-color:rgba(84,208,221,1)">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 align-self-center">
+          <div class="left-content">
+            <h2>Drone Flight Test</h2>
+            <span><h5>Vektas Technologies, we pride ourselves on pushing the boundaries of drone technology. In this video, you'll see one of our latest creations in action - a drone capable of carrying a payload of 1.5 kg with a dry weight of 2.5 kg.
+              In the first 15 minutes of the video, you'll see the drone effortlessly maneuvering with a payload of 1.5 kg. But that's not all - we then pushed it to the limit by increasing the payload to 2 kg and, within 6 minutes, the drone still maintained a steady vertical speed of 5 m/s.
+              With an operational range of 10 km and the ability to withstand wind speeds of up to 8 m/s, this drone is built to go the distance. And, as you'll see in the video, our test was a success.
+              At Vektas Technologies, we're constantly innovating to bring you the best in drone technology. Stay tuned for more exciting developments from our team.</h5></span>
+            <div class="main-button"><a rel="nofollow" href="" target="_parent"></a></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <article class="video-item">
+            <div class="video-caption">
+              <h4>Video</h4>
+            </div>
+            <figure>
+              <video width="380" height="280" controls autoplay loop style="background-color: black;" poster="{% static 'img/delivery drone small.jpg' %}">
+                <source src="{% static 'img/VEKTAS Video.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </div>
+</section>
+<div style="background-color:  rgba(84,208,221,1); margin: 0; padding: 0;">
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+
+<!-- Portfolio Section -->
+<div id="portfolio">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Explore Vektas</h2>
+      <hr>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li><a href="#" data-filter=".web">DRONES</a></li>
+            <li><a href="#" data-filter=".photography">INTERACTIONS</a></li>
+            <li><a href="#" data-filter=".product">SERVICES</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+        {% for i in pc %}
+        <div class="col-sm-6 col-md-3 col-lg-3 web">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{{i.img_large.url}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>{{i.name}}</h4>
+              </div>
+              <img src="{{i.img_small.url}}" class="{% static 'img-responsive' %}" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% for i in pi %}
+        <div class="col-sm-6 col-md-3 col-lg-3 product">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{{i.img_large.url}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>{{i.name}}</h4>
+              </div>
+              <img src="{{i.img_small.url}}" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% for i in pt %}
+        <div class="col-sm-6 col-md-3 col-lg-3 photography">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{{i.img_large.url}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>{{i.name}}</h4>
+              </div>
+              <img src="{{i.img_small.url}}" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Get In Touch</h2>
+      <hr>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      {% csrf_token %}
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-default btn-lg">Send Message</button>
+      </form>
+      <div style="background-color:  rgba(84,208,221); margin: 0; padding: 0;">
+        <br>
+        <br>
+        <br>
+        <span>
+          <i class="fa fa-phone"></i>
+          <h3 style="display:inline">+91-7994023597</h3>
+        </span>
+        <span>
+          <br>
+          <i class="fa fa-envelope"></i>
+          <h3 style="display:inline">nihalahmmednanakkal@gmail.com</h3>
+        </span>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="social">
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container text-center">
+    <div class="fnav">
+      <p>Vektas Technologies | Base Location:<a href="http://www.templatewire.com" rel="nofollow"></a>Trivandrum</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="{% static 'js/jquery.1.11.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/nivo-lightbox.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.isotope.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/contact_me.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+{% endblock %}
